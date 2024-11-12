@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/titleofnotedetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:hint="Título"
+        android:padding="2dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/contentofnotedetail"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/titleofnotedetail"
+        android:background="#faf7f7"
+        android:gravity="top|start"
+        android:hint="Escribe aquí"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <ProgressBar
+        android:id="@+id/progressbarofcreatenote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/save_edit_note_button"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="3dp"
+        android:contentDescription="Guardar nota"
+        android:src="@drawable/ic_baseline_arrow_circle_up_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/goto_main_activity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="3dp"
+        android:contentDescription="Ir a Inicio"
+        android:src="@drawable/ic_baseline_more_vert_24" />
+
+</RelativeLayout>
