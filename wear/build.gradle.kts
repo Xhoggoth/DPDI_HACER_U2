@@ -64,7 +64,8 @@ dependencies {
     implementation(libs.androidx.compose.foundation)  // Composición y disposición
     implementation(libs.androidx.wear.tooling.preview)  // Herramientas específicas para Wear OS
     implementation(libs.androidx.activity.compose)  // Actividad para Compose
-    implementation(libs.androidx.core.splashscreen)  // Pantalla de inicio en Wear OS
+    implementation(libs.androidx.core.splashscreen)
+    implementation(libs.androidx.foundation.layout.android)  // Pantalla de inicio en Wear OS
 
     // Elimina la dependencia de AppCompat para Wear OS
     // implementation 'androidx.appcompat:appcompat:1.6.0'

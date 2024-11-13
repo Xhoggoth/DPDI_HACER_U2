@@ -14,6 +14,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+        // Configuración del runner para las pruebas instrumentadas
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -26,12 +27,19 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+    // Configuración para las pruebas unitarias
+    testOptions {
+        unitTests.isIncludeAndroidResources = true  // Incluye recursos Android en pruebas unitarias
     }
 }
 
@@ -42,8 +50,17 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    wearApp(project(":wear"))  // Asegúrate de tener esta línea si el módulo wear está en el proyecto
+
+    // Dependencias de pruebas
+    testImplementation(libs.junit)  // Para pruebas unitarias con JUnit
+    androidTestImplementation(libs.androidx.junit)  // Para pruebas instrumentadas
+    androidTestImplementation(libs.androidx.espresso.core)  // Para pruebas de interfaz
+
+    // Si estás utilizando un módulo Wear OS, asegúrate de incluirlo correctamente
+    wearApp(project(":wear"))  // Asegúrate de tener esta línea si el módulo Wear está en el proyecto
+}
+
+// Configuración para ejecutar pruebas unitarias
+tasks.withType<Test> {
+    useJUnitPlatform()  // Usar JUnit para pruebas unitarias
 }
