@@ -1,6 +1,0 @@
-com.example.notesapp.test.mobile-annotation-experimental-1.4.0-0 C:\Users\52844\.gradle\caches\transforms-4\253fedd0b0ee33d5f194b797c1e79be4\transformed\annotation-experimental-1.4.0\res
-com.example.notesapp.test.mobile-core-1.5.0-1 C:\Users\52844\.gradle\caches\transforms-4\966e7127f66b4aa7236b936c5aeb01a4\transformed\core-1.5.0\res
-com.example.notesapp.test.mobile-androidTest-2 C:\Users\52844\AndroidStudioProjects\NotesAPP\mobile\build\generated\res\resValues\androidTest\debug
-com.example.notesapp.test.mobile-mergeDebugAndroidTestResources-3 C:\Users\52844\AndroidStudioProjects\NotesAPP\mobile\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
-com.example.notesapp.test.mobile-mergeDebugAndroidTestResources-4 C:\Users\52844\AndroidStudioProjects\NotesAPP\mobile\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
-com.example.notesapp.test.mobile-debugAndroidTest-5 C:\Users\52844\AndroidStudioProjects\NotesAPP\mobile\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

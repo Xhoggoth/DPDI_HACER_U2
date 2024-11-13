@@ -1,3 +1,0 @@
-com.example.notesapp.test
-style WhiteBackgroundDialogTheme
-style WhiteBackgroundTheme
