@@ -3205,6 +3205,7 @@ int id bounceBoth 0x7f080061
 int id bounceEnd 0x7f080062
 int id bounceStart 0x7f080063
 int id buttonPanel 0x7f080064
+int id buttons_layout 0x7f080206
 int id cache_measures 0x7f080065
 int id callMeasure 0x7f080066
 int id cancel_button 0x7f080067
@@ -3431,8 +3432,8 @@ int id no_data 0x7f080143
 int id none 0x7f080144
 int id normal 0x7f080145
 int id north 0x7f080146
-int id noteContent 0x7f080147
-int id noteTitle 0x7f080148
+int id note_content 0x7f080204
+int id note_title 0x7f080205
 int id notification_background 0x7f080149
 int id notification_main_column 0x7f08014a
 int id notification_main_column_container 0x7f08014b

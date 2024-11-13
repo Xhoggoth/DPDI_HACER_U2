@@ -36,6 +36,14 @@
         "source": "C:\\Users\\52844\\.gradle\\daemon\\8.7\\com.example.notesapp.mobile-main-35:\\drawable\\img5.jpg"
     },
     {
+        "merged": "C:\\Users\\52844\\.gradle\\daemon\\8.7\\com.example.notesapp.mobile-debug-33:\\drawable_splash_icon.xml.flat",
+        "source": "C:\\Users\\52844\\.gradle\\daemon\\8.7\\com.example.notesapp.mobile-main-35:\\drawable\\splash_icon.xml"
+    },
+    {
+        "merged": "com.example.notesapp.mobile-debug-33:/layout_activity_createnote.xml.flat",
+        "source": "com.example.notesapp.mobile-main-35:/layout/activity_createnote.xml"
+    },
+    {
         "merged": "C:\\Users\\52844\\.gradle\\daemon\\8.7\\com.example.notesapp.mobile-debug-33:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\52844\\.gradle\\daemon\\8.7\\com.example.notesapp.mobile-main-35:\\layout\\activity_main.xml"
     },
@@ -66,10 +74,6 @@
     {
         "merged": "C:\\Users\\52844\\.gradle\\daemon\\8.7\\com.example.notesapp.mobile-debug-33:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\52844\\.gradle\\daemon\\8.7\\com.example.notesapp.mobile-main-35:\\drawable\\ic_launcher_background.xml"
-    },
-    {
-        "merged": "com.example.notesapp.mobile-debug-33:/drawable_splash_icon.xml.flat",
-        "source": "com.example.notesapp.mobile-main-35:/drawable/splash_icon.xml"
     },
     {
         "merged": "C:\\Users\\52844\\.gradle\\daemon\\8.7\\com.example.notesapp.mobile-debug-33:\\drawable_img2.jpg.flat",

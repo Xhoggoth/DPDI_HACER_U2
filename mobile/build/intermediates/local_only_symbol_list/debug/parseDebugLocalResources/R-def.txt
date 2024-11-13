@@ -21,6 +21,7 @@ drawable img5
 drawable save
 drawable splash_icon
 drawable update
+id buttons_layout
 id contentofnotedetail
 id createcontentofnote
 id createnotefab
@@ -28,8 +29,8 @@ id createtitleofnote
 id empty_imageview
 id goto_main_activity_button
 id no_data
-id noteContent
-id noteTitle
+id note_content
+id note_title
 id progressbarofcreatenote
 id recyclerview
 id save_edit_note_button

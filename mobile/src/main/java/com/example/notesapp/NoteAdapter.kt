@@ -1,35 +1,33 @@
-package com.example.notesapp  // Asegúrate de que el paquete sea el correcto
+package com.example.notesapp
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.notesapp.R
 
-// Definición de la clase Note
-data class Note(val title: String, val content: String)
+data class Note(
+    val title: String,
+    val content: String
+)
 
-class NoteAdapter(private val noteList: ArrayList<Note>) :
-    RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
+class NotesAdapter(private val notesList: List<Note>) : RecyclerView.Adapter<NotesAdapter.NoteViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.note_item, parent, false)
-        return NoteViewHolder(view)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.note_item, parent, false)
+        return NoteViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
-        val note = noteList[position]
-        holder.titleTextView.text = note.title
-        holder.contentTextView.text = note.content
+        val currentNote = notesList[position]
+        holder.titleTextView.text = currentNote.title
+        holder.contentTextView.text = currentNote.content
     }
 
-    override fun getItemCount(): Int {
-        return noteList.size
-    }
+    override fun getItemCount() = notesList.size
 
-    class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val titleTextView: TextView = itemView.findViewById(R.id.noteTitle)
-        val contentTextView: TextView = itemView.findViewById(R.id.noteContent)
+    inner class NoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val titleTextView: TextView = itemView.findViewById(R.id.note_title)
+        val contentTextView: TextView = itemView.findViewById(R.id.note_content)
     }
 }

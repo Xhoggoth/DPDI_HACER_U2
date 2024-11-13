@@ -2,56 +2,85 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp">
+    android:padding="16dp">
 
-    <EditText
-        android:id="@+id/titleofnotedetail"
+    <!-- ScrollView para permitir el desplazamiento vertical -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttons_layout"> <!-- Aquí se usa "@+id/buttons_layout" -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Título de la nota -->
+            <EditText
+                android:id="@+id/titleofnotedetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Título"
+                android:padding="16dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:minHeight="56dp"
+                android:importantForAccessibility="yes" />
+
+            <!-- Contenido de la nota -->
+            <EditText
+                android:id="@+id/contentofnotedetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleofnotedetail"
+                android:background="#faf7f7"
+                android:gravity="top|start"
+                android:hint="Escribe aquí"
+                android:importantForAccessibility="yes"
+                android:minHeight="120dp"
+                android:padding="16dp"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <!-- ProgressBar, inicialmente invisible -->
+            <ProgressBar
+                android:id="@+id/progressbarofcreatenote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <!-- Layout para los botones, fuera del ScrollView -->
+    <RelativeLayout
+        android:id="@+id/buttons_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:hint="Título"
-        android:padding="2dp"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/contentofnotedetail"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_below="@id/titleofnotedetail"
-        android:background="#faf7f7"
-        android:gravity="top|start"
-        android:hint="Escribe aquí"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textSize="12sp" />
-
-    <ProgressBar
-        android:id="@+id/progressbarofcreatenote"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:visibility="invisible" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/save_edit_note_button"
-        android:layout_width="75dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="3dp"
-        android:contentDescription="Guardar nota"
-        android:src="@drawable/ic_baseline_arrow_circle_up_24" />
+        android:paddingTop="8dp">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/goto_main_activity_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="3dp"
-        android:contentDescription="Ir a Inicio"
-        android:src="@drawable/ic_baseline_more_vert_24" />
+        <!-- Botón para guardar la nota -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/save_edit_note_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:contentDescription="Guardar nota"
+            android:src="@drawable/ic_baseline_arrow_circle_up_24" />
+
+        <!-- Botón para volver a la pantalla principal -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/goto_main_activity_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Ir a Inicio"
+            android:src="@drawable/ic_baseline_more_vert_24" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

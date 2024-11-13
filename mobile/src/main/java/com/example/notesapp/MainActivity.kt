@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)  // Asegúrate de que el nombre del layout sea activity_main.xml
+        setContentView(R.layout.activity_main)
 
         // Inicializa el RecyclerView
         recyclerView = findViewById(R.id.recyclerview)
@@ -27,5 +27,16 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, CreateNoteActivity::class.java)
             startActivity(intent)
         }
+
+        // Lista de notas de ejemplo
+        val notesList = listOf(
+            Note("Nota 1", "Contenido de la primera nota"),
+            Note("Nota 2", "Contenido de la segunda nota"),
+            Note("Nota 3", "Contenido de la tercera nota")
+        )
+
+        // Configurar el adapter del RecyclerView
+        val adapter = NotesAdapter(notesList)
+        recyclerView.adapter = adapter
     }
 }

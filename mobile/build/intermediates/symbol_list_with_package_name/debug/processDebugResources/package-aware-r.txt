@@ -3206,6 +3206,7 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id buttonPanel
+id buttons_layout
 id cache_measures
 id callMeasure
 id cancel_button
@@ -3432,8 +3433,8 @@ id no_data
 id none
 id normal
 id north
-id noteContent
-id noteTitle
+id note_content
+id note_title
 id notification_background
 id notification_main_column
 id notification_main_column_container
