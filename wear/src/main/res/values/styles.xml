@@ -7,5 +7,15 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-</resources>
 
+    <!-- Estilo específico para la actividad principal en Wear OS -->
+    <style name="MainActivityTheme.Starting" parent="Theme.MaterialComponents.DayNight">
+        <!-- Fondo de la actividad -->
+        <item name="android:windowBackground">@color/your_background_color</item>
+        <!-- Color del texto principal -->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!-- Color de acento -->
+        <item name="android:colorAccent">@color/your_accent_color</item>
+        <!-- Personaliza más elementos si es necesario -->
+    </style>
+</resources>
