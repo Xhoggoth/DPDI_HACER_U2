@@ -7,11 +7,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"> <!-- Usamos el tema personalizado basado en AppCompat -->
+        android:theme="@style/AppTheme">
 
+        <!-- Define CreateNoteActivity -->
         <activity android:name=".CreateNoteActivity"
             android:exported="true" />
 
+        <!-- Define MainActivity con filtro para iniciar la aplicación -->
         <activity android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -19,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Define NoteDetailsActivity -->
+        <activity android:name=".NoteDetailsActivity"
+            android:exported="true" />
 
     </application>
 

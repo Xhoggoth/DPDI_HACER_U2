@@ -1,6 +1,5 @@
 package com.example.notesapp
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
@@ -20,19 +19,27 @@ class EditNoteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_editnote)
 
-        // Inicializar vistas
+        // Inicializar los elementos de la interfaz
         titleEditText = findViewById(R.id.createtitleofnote)
         contentEditText = findViewById(R.id.createcontentofnote)
         saveButton = findViewById(R.id.save_note_button)
         progressBar = findViewById(R.id.progressbarofcreatenote)
 
+        // Obtener datos de la nota desde el Intent
+        val noteTitle = intent.getStringExtra("noteTitle")
+        val noteContent = intent.getStringExtra("noteContent")
+
+        // Mostrar datos de la nota en los EditText
+        titleEditText.setText(noteTitle)
+        contentEditText.setText(noteContent)
+
         // Configurar el botón de guardar
         saveButton.setOnClickListener {
-            saveNoteAndGoToMain()
+            saveNote()
         }
     }
 
-    private fun saveNoteAndGoToMain() {
+    private fun saveNote() {
         val title = titleEditText.text.toString().trim()
         val content = contentEditText.text.toString().trim()
 
@@ -44,18 +51,12 @@ class EditNoteActivity : AppCompatActivity() {
         // Mostrar el indicador de progreso
         progressBar.visibility = View.VISIBLE
 
-        // Simular el guardado de la nota
+        // Simular guardado de la nota
         progressBar.postDelayed({
             // Ocultar el indicador de progreso
             progressBar.visibility = View.GONE
-            Toast.makeText(this, "Nota guardada", Toast.LENGTH_SHORT).show()
-
-            // Redirigir a MainActivity
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-
-            // Finalizar esta actividad
-            finish()
-        }, 1000) // Simulación de 1 segundo
+            Toast.makeText(this, "Nota actualizada", Toast.LENGTH_SHORT).show()
+            finish()  // Cerrar actividad después de guardar la nota
+        }, 1000)  // Simulación de 1 segundo para el guardado
     }
 }

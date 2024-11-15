@@ -20,10 +20,9 @@ class MainActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.recyclerview)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        // Inicializa el FloatingActionButton y configura el evento de clic
+        // Inicializa el FloatingActionButton para crear notas
         botonFlotanteCrearNota = findViewById(R.id.createnotefab)
         botonFlotanteCrearNota.setOnClickListener {
-            // Navega a la actividad para crear una nueva nota
             val intent = Intent(this, CreateNoteActivity::class.java)
             startActivity(intent)
         }
@@ -35,8 +34,14 @@ class MainActivity : AppCompatActivity() {
             Note("Nota 3", "Contenido de la tercera nota")
         )
 
-        // Configurar el adapter del RecyclerView
-        val adapter = NotesAdapter(notesList)
+        // Configura el adapter para el RecyclerView
+        val adapter = NotesAdapter(notesList) { note ->
+            val intent = Intent(this, NoteDetailsActivity::class.java).apply {
+                putExtra("noteTitle", note.title)
+                putExtra("noteContent", note.content)
+            }
+            startActivity(intent)
+        }
         recyclerView.adapter = adapter
     }
 }

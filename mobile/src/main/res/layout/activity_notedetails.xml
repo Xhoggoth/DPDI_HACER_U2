@@ -1,63 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="10dp">
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginBottom="10dp">
 
     <!-- Título de la nota -->
-    <EditText
-        android:id="@+id/createtitleofnote"
+    <TextView
+        android:id="@+id/note_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:hint="Título"
-        android:padding="2dp"
-        android:textColor="@color/black"
-        android:textSize="12sp"
+        android:text="Título de la nota"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
         android:textStyle="bold" />
 
     <!-- Contenido de la nota -->
-    <EditText
-        android:id="@+id/createcontentofnote"
+    <TextView
+        android:id="@+id/note_content"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_below="@id/createtitleofnote"
-        android:layout_above="@+id/save_note_button"
-        android:background="#faf7f7"
-        android:gravity="top|start"
-        android:hint="Escribe aquí"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textSize="12sp" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/note_title"
+        android:text="Contenido de la nota"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="5dp" />
 
-    <!-- Botón flotante para guardar la nota -->
+    <!-- Botón de editar (similar a los demás) -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/save_note_button"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="3dp"
-        android:src="@drawable/ic_baseline_arrow_circle_up_24"
-        android:contentDescription="Guardar nota" />
-
-    <!-- Botón flotante para ir a la MainActivity -->
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/goto_main_activity_button"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="3dp"
-        android:src="@drawable/ic_baseline_more_vert_24"
-        android:contentDescription="Ir a Inicio" />
-
-    <!-- Indicador de progreso -->
-    <ProgressBar
-        android:id="@+id/progressbarofcreatenote"
+        android:id="@+id/edit_note_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:visibility="invisible" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="Editar nota"
+        android:src="@drawable/ic_baseline_edit_24" />
 
 </RelativeLayout>
